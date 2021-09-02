@@ -99,7 +99,7 @@ class GIFAnimatedImage {
     
     // Calculates frame duration for a gif frame out of the kCGImagePropertyGIFDictionary dictionary.
     static func getFrameDuration(from gifInfo: [String: Any]?) -> TimeInterval {
-        let defaultFrameDuration = 0.1
+        let defaultFrameDuration = 0.05
         guard let gifInfo = gifInfo else { return defaultFrameDuration }
         
         let unclampedDelayTime = gifInfo[kCGImagePropertyGIFUnclampedDelayTime as String] as? NSNumber
